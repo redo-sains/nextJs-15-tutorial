@@ -24,7 +24,7 @@ export default async function DashboardRoute() {
     const {getUser} = await getKindeServerSession();
     const user = await getUser()
 
-    const data = await getData(user.id)
+    const data = await getData(user?.id)
 
   return (
     <div>
