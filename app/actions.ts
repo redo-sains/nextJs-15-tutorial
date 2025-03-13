@@ -7,7 +7,7 @@ import { revalidatePath } from "next/cache";
 
 export async function handleSubmission(formData: FormData) {
 
-    const {getUser} = await getKindeServerSession();
+    const {getUser} = getKindeServerSession();
     const user = await getUser()
 
     if(!user) {
@@ -31,7 +31,6 @@ export async function handleSubmission(formData: FormData) {
     });
 
     revalidatePath("/")
-
     return redirect("/dashboard")
     
 }
