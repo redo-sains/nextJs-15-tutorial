@@ -48,8 +48,8 @@ export function Navbar() {
         </div>
       ) : (
         <div className="flex items-center gap-4">
-          <Link href="/api/auth/login" className={buttonVariants()}>Login</Link>
-          <Link href="/api/auth/register" className={buttonVariants({ variant: "secondary" })}>
+          <Link prefetch={false} href="/api/auth/login" className={buttonVariants()}>Login</Link>
+          <Link prefetch={false} href="/api/auth/register" className={buttonVariants({ variant: "secondary" })}>
             Sign up
           </Link>
         </div>
