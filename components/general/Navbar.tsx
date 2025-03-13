@@ -48,10 +48,10 @@ export function Navbar() {
         </div>
       ) : (
         <div className="flex items-center gap-4">
-          <a href="/api/auth/login" className={buttonVariants()}>Login</a>
-          <a href="/api/auth/register" className={buttonVariants({ variant: "secondary" })}>
+          <Link href="/api/auth/login" className={buttonVariants()}>Login</Link>
+          <Link href="/api/auth/register" className={buttonVariants({ variant: "secondary" })}>
             Sign up
-          </a>
+          </Link>
         </div>
       )}
     </nav>
